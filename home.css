@@ -1,0 +1,399 @@
+.main-body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #e9ec3e;
+
+}
+
+
+
+/* hamburger */
+/* full screen splash navigation for mobile devices and tablets */
+.hamburger-home{
+    position: relative;
+    top: calc(50% - 2px);
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+}
+
+.hamburger-home > span,
+.hamburger-home > span::before,
+.hamburger-home > span::after{
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 1.5px;
+    border: 99px;
+    background-color: rgba(0, 0, 0, 0.548);
+    transition-duration: .25s;
+}
+
+
+.hamburger-home > span::before{
+    content: '';
+    top: -16px;
+}
+
+.hamburger-home > span::after{
+    content: '';
+    top: 16px;
+}
+
+@media (min-width: 860px){
+    .menu-toggle{
+        display: none;
+    }
+}
+
+@media (max-width: 860px){
+    .menu-toggle{
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        width: 60px;
+        height: 60px;
+        border-radius: 99px;
+        cursor: pointer;
+        z-index: 5;
+    }
+    .sidebar-home {
+    top: -20vh;
+    transition: 0.7s ease-out;
+    background-color: white;
+    }
+    .sidebar-home.is-active{
+     top: 0vh;
+     transition: 0.35s ease-in;
+     
+    }
+    .menu-toggle.is-active .hamburger-home > span{
+        transform: rotate(45deg);
+        background-color: black;
+    }
+    .menu-toggle.is-active .hamburger-home > span::before{
+        top: 0;
+        transform: rotate(0deg);
+        background-color: black;
+    }
+    .menu-toggle.is-active .hamburger-home > span::after{
+        top: 0;
+        transform: rotate(90deg);
+        background-color: black;
+    }
+}
+/* end full screen splash navigation */
+
+/* navigation */
+.nav-home-home{
+    text-decoration: none;
+    color: black;
+}
+.sidebar-home {
+    flex: 1 1 0;
+    font-family: 'Neue Haas Grotesk Display Pro';
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.menu {
+    transition: 3s ease-in-out;
+}
+
+.sidebar-home .menu .menu-item {
+    padding-top: 0.3em;
+    text-decoration: none;
+    color: black;
+}
+
+.menu-toggle {
+    display: block;
+}
+
+.sidebar-home .menu {
+    margin-left: 5vh;
+    margin-bottom: 2em;
+}
+
+.sidebar-home.is-active {
+    display: block;
+}
+
+.sidebar-home .menu .menu-item.is-active {
+    text-decoration: underline;
+    text-underline-offset: 0.8rem;
+    text-decoration-thickness: 0.1rem;
+    text-decoration-color: black;
+}
+
+@media (min-width: 860px) {
+    .sidebar-home {
+        background-color: #e9ec3e;
+        top: 0;
+        height: 10vh;
+        color: black;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .sidebar-home .menu .menu-item {
+        font-size: 1em;
+        color: black;
+        padding-right: 0.4em;
+    }
+
+    .menu-box {
+        margin-top: 3em;
+        margin-right: 2em;
+        padding-left: 2em;
+    }
+
+    .menu-box a {
+        letter-spacing: -1px;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .font-span {
+        font-family: 'Neue Haas Grotesk Display Pro';
+    }
+
+    .sidebar-home .menu .menu-item:hover {
+        text-decoration: underline;
+        color: black;
+        text-underline-offset: 0.8rem;
+        text-decoration-thickness: 1px;
+    }
+
+    .sidebar-home h3 {
+        color: black;
+        padding-top: 2.2em;
+        letter-spacing: 0.2rem;
+        font-size: 1em;
+        font-weight: 900;
+    }
+}
+/* media query for mobile devices (phone and tablets) */
+@media (max-width: 860px){
+    .sidebar-home{
+    display: none;
+    background-color: none;
+    top: 0;
+    height: 1000vh;
+    z-index: 5;
+    color: rgb(255, 255, 255);
+    }
+    .menu-box{
+        margin-top: 6em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .sidebar-home .menu .menu-item{
+        font-size: 2.5em;
+     }
+     .sidebar-home .menu .menu-item:hover{
+        text-decoration: underline;
+        text-underline-offset: 0.8rem;
+        text-decoration-thickness: 0.1rem;
+     }
+}
+
+/* END NAVIGATION */
+/* first section */
+.hello {
+    font-size: 3em;
+    font-weight: 300;
+    padding-left: 1rem;
+    margin-top: 15%;
+    width: 75%;
+    font-family: 'Neue Haas Grotesk Display Pro';
+    color: black;
+}
+
+.hello a {
+    text-decoration: underline;
+    color:black;
+    text-underline-offset: 0.3rem;
+    text-decoration-thickness: 0.1rem;
+}
+
+.hello a:hover {
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+/* Grid Format - Second Section*/
+/* second section */
+.second {
+    margin-bottom: 2em;
+    padding-inline: 2em;
+    padding-right: 2em;
+    }
+/* this is the image + link flex inside of the grid flex for each of the 4 images*/
+.one, .two, .three, .four{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin-bottom: 10em;
+}
+
+/* home-link to format the flex grid on the home page */
+.home-link{
+    text-decoration: underline;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    text-underline-offset: 0.8rem;
+    text-decoration-thickness: 1px;
+    font-size: 1.3em;
+}
+.home-link:hover{
+    text-decoration-style: wavy;
+}
+/* media queries to make home page grid of flex images and links responsive */  
+@media (max-width: 860px){
+    .home-img-1, .home-img-2, .home-img-3, .home-img-4{
+        padding-bottom: 5.5em;
+    }
+    .home-img-4{
+        width: 85%; 
+    }
+   } 
+@media (min-width: 860px){
+.home-img-1, .home-img-2, .home-img-3, .home-img-4{
+    padding-bottom: 6.5em;
+}
+.home-img-1, .home-img-2, .home-img-3{
+    width: 100%;
+}  
+.home-img-4{
+    width: 70%;
+}
+/* actual flex grid css */
+.row-flex-1{
+    display: flex;
+    width: 90vw;
+}
+.rf1-column{
+    width: 20%;
+}
+.row-flex-2{
+    display: flex;
+    width: 90vw;
+}
+.rf2-column{
+    width: 20%;
+}
+.row-flex-3{
+    display: flex;
+    width: 90vw;
+}
+.rf3-column{
+    width: 20%;
+}
+.row-flex-4{
+    display: flex;
+    width: 80vw;
+}
+.rf4-column{
+    width: 30%;
+}
+ }
+ /* End Second Section - Flex Grid CSS*/
+
+/* contact - home home*/
+.contact-section-home {
+       }
+
+.contact-flex-box-home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(41, 28, 28);
+z-index: 4;
+position: relative;
+}
+.contact-head{
+  font-family: 'Neue Haas Grotesk Display Pro';
+  font-size: 10em;
+  font-weight: 300;
+}
+.contact-flex-box-home p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+}
+.contact-btn-home{
+  border: 2px solid #302f3a;
+  position: relative;
+  padding: 1rem 1rem;
+  background-color: transparent;
+  cursor: pointer;
+  width: auto;
+  text-align: center;
+  margin-bottom: 4em;
+}
+.contact-btn-link-home{
+  text-decoration: none;
+  font-family: 'Neue Haas Grotesk Display Pro';
+  color: #302f3a;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.contact-btn-home::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -.6rem;
+  top: -.5rem;
+  z-index: -1;
+  background-color: #689e6d;
+  transition: all 200ms ease-out;
+}
+
+.contact-btn-home:hover::before {
+  top: 0;
+  left: 0;
+}
+
+.contact-btn-home:active {
+  transform: translateY(3px);
+}
+
+.contact-btn-home a{
+    letter-spacing: 7px;
+}
+
+.collab-chat-hire-home{
+    color: black;
+    margin-top: -7em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+/* end contact section */
+
+
+ /* home page version of footer -home */
+ .work-together-home{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    color: black'
+}
+/* end footer */

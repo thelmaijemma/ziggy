@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('./font/font.css');
+@import url('./home.css');
+@import url('./gallery.css');
+@import url('project.css');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+ 
+
+.alt-body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+}
+/* some styles I may or may not use later are commented out*/
+.app{
+    /*display: flex;
+    min-height: 100vh;*/
+}
+/*
+border-right: 5px solid rgb(146, 173, 143);
+*/
+.content {
+    flex: 1 1 0;
+    
+}
+
+/* navigation start - bar on top for larger screens*/
+.boxy{
+    background-image: url('./images/contact-image-split.png');
+}
+
+.nav-home{
+    text-decoration: none;
+    color: black;
+}
+.sidebar{
+    flex: 1 1 0;
+    font-family: 'Neue Haas Grotesk Display Pro';
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+.menu{
+    transition: 3s ease-in-out;
+}
+.sidebar .menu .menu-item{
+    padding-top: 0.3em;
+    text-decoration: none;
+    color: black;
+}
+.menu-toggle{
+    display: block;
+}
+.sidebar .menu{
+    margin-left: 5vh;
+    margin-bottom: 2em;
+}
+.sidebar.is-active{
+    display: block;   
+}
+.sidebar .menu .menu-item.is-active{
+    text-decoration: underline;
+    text-underline-offset: 0.8rem;
+    text-decoration-thickness: 0.1rem;
+}
+/* media query for mobile devices (phone and tablets) */
+@media (max-width: 860px){
+    .sidebar{
+    display: none;
+    background-color: #ffffff;
+    top: 0;
+    height: 1000vh;
+    z-index: 5;
+    color: rgb(0, 0, 0);
+    }
+    .menu-box{
+        margin-top: 6em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .menu-box svg{
+        fill: black;
+        height: 1em;
+    }
+    .menu-box path{
+        fill: black;
+    }
+    .sidebar .menu .menu-item{
+        font-size: 2.5em;
+     }
+     .sidebar .menu .menu-item:hover{
+        text-decoration: underline;
+        text-underline-offset: 0.8rem;
+        text-decoration-thickness: 0.1rem;
+     }
+}
+/* media query for large screens and desktop */
+@media (min-width: 860px){
+.sidebar {
+    background-color: #ffffff;
+    top: 0;
+    height: 10vh;
+    color: rgb(0, 0, 0);  
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.sidebar .menu .menu-item{
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+    padding-right: 0.4em;
+ }
+ .menu-box{
+    margin-top: 3em;
+    margin-right: 2em;
+    padding-left: 2em;
+ }
+ .menu-box a {
+    letter-spacing: -1px;
+    font-family: 'Playfair Display', serif;
+ }
+.font-span{
+    font-family: 'Neue Haas Grotesk Display Pro';
+}
+.sidebar .menu .menu-item:hover{
+    color:#3a9751;
+    transition: 0.3s ease-in-out;
+}
+ .sidebar h3 {
+    color: rgb(0, 0, 0);
+    padding-top: 2.2em;
+    letter-spacing: 0.2rem;
+    font-size: 1em;
+    font-weight: 900;
+}
+}
+/* end navigation - bar on top*/
+
+/* full screen splash navigation for mobile devices and tablets */
+.hamburger{
+    position: relative;
+    top: calc(50% - 2px);
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+}
+
+.hamburger-white > span,
+.hamburger-white > span::before,
+.hamburger-white > span::after{
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    border: 99px;
+    background-color: rgb(0, 0, 0);
+    transition-duration: .25s;
+}
+
+.hamburger > span::before{
+    content: '';
+    top: -16px;
+}
+
+.hamburger > span::after{
+    content: '';
+    top: 16px;
+}
+
+@media (min-width: 860px){
+    .menu-toggle{
+        display: none;
+    }
+}
+
+@media (max-width: 860px){
+    .menu-toggle{
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        width: 60px;
+        height: 60px;
+        border-radius: 99px;
+        cursor: pointer;
+        z-index: 5;
+    }
+    .sidebar {
+    top: -20vh;
+    transition: 0.7s ease-out;
+    }
+    .sidebar.is-active{
+     top: 0vh;
+     transition: 0.35s ease-in;
+     
+    }
+    .menu-toggle.is-active .hamburger > span{
+        transform: rotate(45deg);
+        background-color: black;
+    }
+    .menu-toggle.is-active .hamburger > span::before{
+        top: 0;
+        transform: rotate(0deg);
+        background-color: black;
+    }
+    .menu-toggle.is-active .hamburger > span::after{
+        top: 0;
+        transform: rotate(90deg);
+        background-color: black;
+    }
+}
+/* end full screen splash navigation */
+
+/* contact section */
+.contact-section{
+    height: 100vh;
+    background-color: transparent;
+}
+.contact-section-div {
+   height: 100vh;
+  z-index: 2;
+      }
+
+  .contact-flex-box{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: rgb(0, 0, 0);
+z-index: 4;
+  }
+  .contact-flex-box h4{
+
+    font-family: 'Neue Haas Grotesk Display Pro';
+    font-size: 6em;
+    padding-bottom: -3em;
+    font-weight: 300;
+  }
+  .contact-flex-box p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+  }
+  .contact-btn{
+    border: 2px solid #302f3a;
+    position: relative;
+    margin: 2rem 3rem;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .contact-btn-link{
+    text-decoration: none;
+    font-family: 'Neue Haas Grotesk Display Pro';
+    color: #302f3a;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .contact-btn::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -.6rem;
+    top: -.5rem;
+    z-index: -1;
+    background-color: #689e6d;
+    transition: all 200ms ease-out;
+  }
+  
+  .contact-btn:hover::before {
+    top: 0;
+    left: 0;
+  }
+  
+  .contact-btn:active {
+    transform: translateY(3px);
+  }
+
+  .collab-chat-hire{
+    margin-top: -2em;
+  }
+/* end contact section
+*/
+/* footer */
+.work-together{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+}
+
+.work-together-big{
+    font-family: 'Neue Haas Grotesk Display Pro', serif;
+    font-size: 4em;
+    font-weight: 100;
+}
+
+.work-together-skills{
+    font-family: 'Neue Haas Grotesk Display Pro', serif;
+    font-size: 2.3em;
+    padding-left: 1em;
+}
+
+code{
+    position: relative;
+    top: 10em;
+    padding-left: 2em;
+    padding-bottom: 2em;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+/*end footer */

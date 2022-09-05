@@ -1,0 +1,27 @@
+/* project */
+.project{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    margin-top: 10em;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+}
+
+.project-title{
+    font-family: 'Neue Haas Grotesk Display Pro', serif;
+    font-size: 4em;
+    font-weight: 100;
+}
+
+.project-skills{
+    font-family: 'Neue Haas Grotesk Display Pro', serif;
+    font-size: 2.3em;
+    padding-left: 1em;
+}
+
+.project-text{
+    width: 50%;
+}
+/*end project */

@@ -1,0 +1,44 @@
+.gallery-flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 9em;
+    margin-inline: 10%;
+    margin-bottom: 5em;
+    transition: 3s ease-in-out;
+}
+
+.gallery-image{
+    width: 16em;
+    height: 24em;
+    background-color: aliceblue;
+    margin-inline: 1em;
+    margin-bottom: 7em;
+}
+
+.gallery-image img {
+    background: #F1F1FA;
+    height: 100%;
+    transition: 3s ease-in-out;
+}
+
+.gallery-image a{
+    text-decoration: none;
+}
+
+.project-link{
+    text-align: center;
+}
+.project-link-text-show, .project-link-text-hide {
+    font-weight: 100;
+    font-size: 1.7em;
+}
+.link-hide{
+    color: white;
+}
+
+.link-show{ 
+    color: black;
+}
+
